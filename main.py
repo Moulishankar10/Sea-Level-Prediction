@@ -61,3 +61,12 @@ model.add(Dense(1, activation = 'linear'))
 model.compile(loss = 'mse', optimizer = 'adam', metrics = ['mse', 'mae', 'accuracy'])
 history = model.fit(xtrain_scaled, ytrain_scaled, epochs = 100, batch_size = 70, validation_split = 0.1, verbose = 1)
 print("\n\n ----- Model is trained successfully ! ----- \n\n")
+
+# VISUALISING THE MODEL LOSS
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('MODEL LOSS')
+plt.ylabel('Loss')
+plt.xlabel('Epochs')
+plt.legend(['Train', 'Validation'], loc='upper right')
+plt.show()
