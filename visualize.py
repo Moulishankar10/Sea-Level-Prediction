@@ -41,3 +41,18 @@ y_scaled = scaler_y.fit_transform(y)
 
 # LOADING THE TRAINED MODEL
 model = load_model("model/model",custom_objects=None,compile=True)
+
+# PREDICTING THE MODEL
+y_est = model.predict(x_scaled)
+y_est = scaler_y.inverse_transform(y_est)
+
+
+# VISUALISING THE MODEL PERFORMANCE
+plt.plot(x,y, color = 'blue')
+plt.plot(x,y_est, color = 'red')
+plt.title('Sea Level Prediction')
+plt.xlabel('Time')
+plt.ylabel('GMSL')
+plt.legend(['Actual Data', 'Predicted Data'], loc='upper left')
+plt.show()
+
