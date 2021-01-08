@@ -17,7 +17,7 @@ from sklearn.metrics import r2_score
 from tensorflow.keras.models import save_model 
 
 # IMPORTING DATA
-data = pd.read_csv("sea-data.csv")
+data = pd.read_csv("data/sea-data.csv")
 
 # PREPROCESSING DATA
 x = []
