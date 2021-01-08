@@ -32,5 +32,6 @@ for i in range(len(data["Time"])):
 
 y = data["GMSL"].values
 
-
+# SPLITTING THE TRAINING AND VALIDATION DATA
+x_train, x_val, y_train, y_val = train_test_split(x, y, test_size = 0.1, random_state = 0)
 
