@@ -37,3 +37,10 @@ scaler_y = MinMaxScaler()
 
 x_scaled = scaler_x.fit_transform(x)
 y_scaled = scaler_y.fit_transform(y)
+
+# LOADING THE TRAINED MODEL
+model = load_model("model/model",custom_objects=None,compile=True)
+
+# INPUT DATA
+print("\nEnter the following details as what you want to predict!")
+input_month = input("\nEnter the time period (MM-YYYY) : ")
