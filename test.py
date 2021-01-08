@@ -12,7 +12,7 @@ from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
 
 # IMPORTING DATA
-data = pd.read_csv("data/data.csv")
+data = pd.read_csv("data/sea-data.csv")
 
 # PREPROCESSING DATA
 x = []
