@@ -40,3 +40,11 @@ x_train = np.reshape(x_train, (-1,1))
 x_val = np.reshape(x_val, (-1,1))
 y_train = np.reshape(y_train, (-1,1))
 y_val = np.reshape(y_val, (-1,1))
+
+# SCALING THE DATA
+scaler_x = MinMaxScaler()
+scaler_y = MinMaxScaler()
+
+xtrain_scaled = scaler_x.fit_transform(x_train)
+ytrain_scaled = scaler_y.fit_transform(y_train)
+xval_scaled = scaler_x.fit_transform(x_val)
