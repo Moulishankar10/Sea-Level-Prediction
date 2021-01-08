@@ -35,3 +35,8 @@ y = data["GMSL"].values
 # SPLITTING THE TRAINING AND VALIDATION DATA
 x_train, x_val, y_train, y_val = train_test_split(x, y, test_size = 0.1, random_state = 0)
 
+# RESHAPING THE DATA
+x_train = np.reshape(x_train, (-1,1))
+x_val = np.reshape(x_val, (-1,1))
+y_train = np.reshape(y_train, (-1,1))
+y_val = np.reshape(y_val, (-1,1))
