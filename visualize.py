@@ -11,7 +11,6 @@ import datetime as dt
 from tensorflow import keras
 from tensorflow.keras.models import load_model
 from sklearn.preprocessing import MinMaxScaler
-from sklearn.model_selection import train_test_split
 
 # IMPORTING DATA
 data = pd.read_csv("data/sea-data.csv")
@@ -39,3 +38,6 @@ scaler_y = MinMaxScaler()
 
 x_scaled = scaler_x.fit_transform(x)
 y_scaled = scaler_y.fit_transform(y)
+
+# LOADING THE TRAINED MODEL
+model = load_model("model/model",custom_objects=None,compile=True)
