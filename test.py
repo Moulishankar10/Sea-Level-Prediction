@@ -44,6 +44,7 @@ model = load_model("model/model",custom_objects=None,compile=True)
 # INPUT DATA
 print("\nEnter the Time Period on when you want to explore the prediction !")
 input_month = input("\nTime Period (MM-YYYY) : ")
+month = ["January","February","March","April","May","June","July","August","September","October","November","December"]
 
 # PREPROCESSING INPUT DATA
 x_str = dt.datetime(int(input_month[-4:]),int(input_month[:2]),1)
@@ -59,4 +60,4 @@ ypred_scaled = model.predict(xpred_scaled)
 y_pred = scaler_y.inverse_transform(ypred_scaled)
 
 # DISPLAYING THE RESULTS
-print(f"\n\n The Predicted Sea Level Value on {input_month} ---- {round(float(y_pred),4)} meters \n\n")
+print(f"\n\n As per the prediction, on {month[int(input_month[:2])-1]} {int(input_month[-4:])}, the value of Sea Level might be -> Rs. {round(float(y_pred),4)} (Monthly Average)\n\n")
