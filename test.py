@@ -60,4 +60,4 @@ ypred_scaled = model.predict(xpred_scaled)
 y_pred = scaler_y.inverse_transform(ypred_scaled)
 
 # DISPLAYING THE RESULTS
-print(f"\n\n As per the prediction, by {month[int(input_month[:2])-1]} {int(input_month[-4:])}, the Sea Level might be changed to {round(float(y_pred),1)} meters (Monthly Average)\n\n")
+print(f"\n\n As per the prediction, by {month[int(input_month[:2])-1]} {int(input_month[-4:])}, the Global Mean Sea Level might be changed to {round(float(y_pred),1)} mm (Monthly Average)\n\n")
