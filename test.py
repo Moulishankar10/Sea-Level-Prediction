@@ -42,8 +42,8 @@ y_scaled = scaler_y.fit_transform(y)
 model = load_model("model/model",custom_objects=None,compile=True)
 
 # INPUT DATA
-print("\nEnter the following details as what you want to predict!")
-input_month = input("\nEnter the time period (MM-YYYY) : ")
+print("\nEnter the Time Period on when you want to explore the prediction !")
+input_month = input("\nTime Period (MM-YYYY) : ")
 
 # PREPROCESSING INPUT DATA
 x_str = dt.datetime(int(input_month[-4:]),int(input_month[:2]),1)
